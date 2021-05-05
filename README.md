@@ -1,1 +1,1 @@
-This repository consists machine learning projects
+This repository consists data science projects along with machine learning and deep learning projects
