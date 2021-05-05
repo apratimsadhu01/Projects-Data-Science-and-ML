@@ -1,0 +1,8 @@
+pandas
+numpy
+Flask
+flask_restful
+scikit-learn
+gunicorn
+Jinja2
+MarkupSafe
