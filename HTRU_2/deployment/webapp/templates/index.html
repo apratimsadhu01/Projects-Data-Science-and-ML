@@ -1,0 +1,127 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>PULSAR STAR DETECTION</title>
+</head>
+<body text="black">
+	<center>
+			<form action="{{ url_for('predict')}}" method="post">
+				<h1>PULSAR STAR DECTION USING MACHINE LEARNING</h1>
+				<br>
+				<a>This is a machine learning and deep learning model to detect puldar star. The models used  are 
+					<br>1. logistic Regression
+					<br>2. K-Nearest Neighbor
+					<br>3. Support Vector Classifier
+					<br>4. Decision Tree
+					<br>5. Random Forest
+					<br>6. Bagging Classifier
+					<br>7. AdaBossting Classifier
+					<br>8. Gradient Descent Boosting Classifier
+					<br>
+					These models have varying accuracy and is used to detect the possibility of a pulsar star. The data used is HTRU_2 dataset.
+				</a>
+				<br>
+				<h2>Enter Fields</h2>
+
+				<div>
+			<tr>
+				<td><label for = "Mean of the integrated profile">Mean of the integrated profile:</label></td>
+				<input type= "text" name="Mean of the integrated profile" placeholder="Value range: 5.81 - 192.61" required="required" >
+			</tr>
+		</div>
+		<br>
+
+		<div>
+			<tr>
+				<td><label for = "Standard deviation of the integrated profile">Standard deviation of the integrated profile:</label></td>
+				<input type= "text" name="Standard deviation of the integrated profile" placeholder="Value range: 24.77 - 98.77" required="required" >
+			</tr>
+		</div>
+		<br>
+
+		<div>
+			<tr>
+				<td><label for = "Excess kurtosis of the integrated profile">Excess kurtosis of the integrated profile:</label></td>
+				<input type= "text" name="Excess kurtosis of the integrated profile" placeholder="Value range: -1.87 - 8.06" required="required" >
+			</tr>
+		</div>
+		<br>
+
+		<div>
+			<tr>
+				<td><label for = "Skewness of the integrated profile">Skewness of the integrated profile:</label></td>
+				<input type= "text" name="Skewness of the integrated profile" placeholder="Value range: -1.76 - 68.10" required="required" >
+			</tr>
+		</div>
+		<br>
+
+		<div>
+			<tr>
+				<td><label for = "Mean of the DM-SNR curve">Mean of the DM-SNR curve:</label></td>
+				<input type= "text" name="Mean of the DM-SNR curve" placeholder="Value range: 0.21 - 223.39" required="required" >
+			</tr>
+		</div>
+		<br>
+
+		<div>
+			<tr>
+				<td><label for = "Standard deviation of the DM-SNR curve">Standard deviation of the DM-SNR curve:</label></td>
+				<input type= "text" name="Standard deviation of the DM-SNR curve" placeholder="Value range: 7.37 - 110.64" required="required" >
+			</tr>
+		</div>
+		<br>
+
+		<div>
+			<tr>
+				<td><label for = "Excess kurtosis of the DM-SNR curve">Excess kurtosis of the DM-SNR curve:</label></td>
+				<input type= "text" name="Excess kurtosis of the DM-SNR curve" placeholder="Value range: -3.13 - 34.53" required="required" >
+			</tr>
+		</div>
+		<br>
+
+		<div>
+			<tr>
+				<td><label for = "Skewness of the DM-SNR curve">Skewness of the DM-SNR curve:</label></td>
+				<input type= "text" name="Skewness of the DM-SNR curve" placeholder="Value range: -1.97 - 1191.00" required="required" >
+			</tr>
+		</div>
+		<br>
+		<br>
+
+		<div>
+		<tr>
+			<!-- <td ><h3><strong>SELECT A CLASSIFIER:</strong></h3></td> -->
+			<td>
+				<label for="choice">SELECT A CLASSIFIER:</label>
+			<select name="choice" placeholder="choice" required="required">
+  				<option value="1">Logistic Regression Classifier</option>
+  				<option value="2">K-Nearest Neighbor Classifier</option>
+  				<option value="3">Support Vector Classifier</option>
+  				<option value="4">Decision Tree Classifier</option>
+  				<option value="5">Random Forest Classifier</option>
+  				<option value="6">Bagging Classifier</option>
+  				<option value="7">AdaBossting Classifier</option>
+  				<option value="8">Gradient Descent Boosting Classifier</option>
+			</select>
+		</td>
+		</tr>
+		</div>
+<br><br>
+
+		<div class="button_cont" align="center">
+			<button type="submit">
+				<strong><h3>PREDICT</h3></strong>
+				<h5>Pulsar Star/Non-Pulsar Star</h5>
+			</button>
+		</div>
+</form>
+</center>
+		<div>
+			<center>
+				<h1>{{ prediction_text}}</h1>
+			</center>
+		</div>
+</body>
+</html>
